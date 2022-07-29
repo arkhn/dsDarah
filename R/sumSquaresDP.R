@@ -10,9 +10,9 @@
 #' @export
 
 
-sumSquaresDP <- function(x, epsilon, x_min, x_max){
+sumOfSquaresDP <- function(x, epsilon, x_min, x_max){
   xx_min <- min(x_min^2, x_max^2)
   xx_max <- max(x_min^2, x_max^2)
-  sum_squares <- py_module$pydp_wrapper$sum_PyDP$pyDP_bounded_sum(x^2, epsilon, xx_min, xx_max)
-  return(sum_squares)
+  sum_of_squares <- py_module$pydp_wrapper$sum_PyDP$pyDP_bounded_sum(x^2, epsilon, xx_min, xx_max)
+  return(sum_of_squares)
 }
